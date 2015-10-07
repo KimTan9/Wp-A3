@@ -1,19 +1,74 @@
+<?php 
+session_start();
+$validPages = array ('', 'onlineBuy-moveID1', 'onlineBuy-moveID2', 'onlineBuy-moveID3',
+'onlineBuy-moveID4', 'onlineBuy-moveID5', 'onlineBuy-moveID6', 'movieList', 'movietimetable','newsList',
+'news-1', 'news-2');
+$pageTitle = "Silverado Cinema";
+$pageContent= 'index.php';
+$page = "";
+if (isset ($_GET['page'])){
+$page = $_GET['page'];
+}
+
+if (in_array($page, $validPages)){
+$pageContent = 'a3/'.$page.'.php';
+	switch ($page){
+	case '':
+		$pageContent = "index.php";
+		$pageTitle ="Silverado Cinema";
+	break;
+	
+	case 'onlineBuy-moveID1':
+	$pageTitle = "Silverado - movie1";
+	break;
+	
+	case 'onlineBuy-moveID2' :
+	$pageTitle = "Silverado - movie2";
+	break;
+	
+	case 'onlineBuy-moveID3':
+	$pageTitle = "Silverado - movie3";
+	break;
+	
+	case 'onlineBuy-moveID4':
+	$pageTitle = "Silverado - movie4";
+	break;
+	
+	case 'onlineBuy-moveID5':
+	$pageTitle = "Silverado - movie5";
+	break;
+	
+	case 'onlineBuy-moveID6':
+	$pageTitle ="Silverado - movie6";
+	break;
+	
+	case 'movielist':
+	$pageTitle = "Silverado -movielist";
+	break;
+	
+	case 'movietimetable':
+	$pageTitle = "Silverado -movietimetable";
+	break;
+	
+	case 'news-1':
+	$pageTitle = "Silverado - news1";
+	break;
+	
+	case 'news-2':
+	$pageTitle = "Silverado - news2";
+	break;
+	case 'newsList':
+	$pageTitle = "Silverado - newList";
+	break;
+	
+}
+}
+?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <title>Welcome to Silverado</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/metro.min.css" rel="stylesheet">
-    <link href="css/metro-responsive.min.css" rel="stylesheet">
-    <link href="css/metro-icons.min.css" rel="stylesheet">
-    <link href="css/ul.css" rel="stylesheet">
-    <link href="css/buttons.css" rel="stylesheet">
-    <link href="css/_fix.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <?php include_once ('includes/headA.php');?>
+
 </head>
 
 <body>
@@ -30,7 +85,7 @@
         <div id="big_Head" class="page-header fix_cloudsColor">
             <div class="container">
 				<div class="left">
-                <a href= "index.html"><h1><img src="imgs/logo.png" width="150" height="150"></a>
+                <a href= "index.php"><h1><img src="imgs/logo.png" width="150" height="150"></a>
                     Silverado&nbsp;&nbsp;&nbsp;
                     <small>The best experience for film</small>
                 </h1>
@@ -38,27 +93,8 @@
             </div>
         </div>
         <!--Navigation area><!-->
-        <nav class="nav nav-pills navbar-static-top fix_UpAndDownForZero">
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href= "index.html"><button class="button button-small button-plain button-border" >
-                            <b>Home</b>
-                        </button></a>
-                    </li>
-                    <li>
-                        <a href="movieList.html"><button class="button button-small button-plain button-border" >
-                            <b>Movie Information</b>
-                        </button></a>
-                    </li>
-                    <li>
-                        <a href="newsList.html"><button class="button button-small button-plain button-border" href="News.html">
-                            <b>News</b>
-                        </button></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+      <?php include_once "includes/nav.php";?>
+      
         <!-- ~~~~Navigation area><!-->
 
         <!--big_1><!-->
@@ -66,19 +102,19 @@
             <div class="tile-content">
                 <div class="carousel" data-role="carousel">
                     <div class="slide">
-                        <a href='movieList.html#The Bourne Legacy' target="_blank"><img src="imgs/bigRectRollingImgs/BRRI_1.png"></a>
+                        <a href='movieList.php#The Bourne Legacy' target="_blank"><img src="imgs/bigRectRollingImgs/BRRI_1.png"></a>
 						<span class="tile-label tileLabelFixed_L">The Bourne Legacy</span>
                     </div>
                     <div class="slide">
-                        <a href='movieList.html#The Godfather' target="_blank"><img src="imgs/bigRectRollingImgs/BRRI_2.png"></a>
+                        <a href='movieList.php#The Godfather' target="_blank"><img src="imgs/bigRectRollingImgs/BRRI_2.png"></a>
 						<span class="tile-label tileLabelFixed_L">The Godfather</span>
                     </div>
                     <div class="slide">
-                        <a href='movieList.html#Despicable Me 2' target="_blank"><img src="imgs/bigRectRollingImgs/BRRI_6.png"></a>
+                        <a href='movieList.php#Despicable Me 2' target="_blank"><img src="imgs/bigRectRollingImgs/BRRI_6.png"></a>
 						<span class="tile-label tileLabelFixed_L">Case Closed: Sunflowers of Inferno</span>
                     </div>
                     <div class="slide">
-                        <a href='movieList.html#Titanic' target="_blank"><img src="imgs/bigRectRollingImgs/BRRI_5.png"></a>
+                        <a href='movieList.php#Titanic' target="_blank"><img src="imgs/bigRectRollingImgs/BRRI_5.png"></a>
 						<span class="tile-label tileLabelFixed_L">Titanic</span>
                     </div>
                 </div>
@@ -87,19 +123,19 @@
 
         <!--new seats><!-->
         <div id="newSeats" class="tile tile-large-x">
-            <a href='news-1.html' target="_blank"><img src="imgs/310wide/seats_TilePic.png"/></a>
+            <a href='news-1.php' target="_blank"><img src="imgs/310wide/seats_TilePic.png"/></a>
             <span class="tile-label tileLabelFixed_L">The Cinema Reopen</span>
         </div>
 
         <!--Membership><!-->
         <div id="Membership" class="tile tile-large-x">
-			<a href='news-2.html' target="_blank"><img src="imgs/310wide/membership.jpg"/></a>
+			<a href='news-2.php' target="_blank"><img src="imgs/310wide/membership.jpg"/></a>
 			<span class="tile-label tileLabelFixed_L">Membership</span>
         </div>
 
         <!--Dolby><!-->
         <div id="DolbySystem" class="tile tile-large-x">
-            <a href='movieList.html#Case Closed: Sunflowers of Inferno' target="_blank"><img src="imgs/310wide/Japaness.png"/ ></a>
+            <a href='movieList.php#Case Closed: Sunflowers of Inferno' target="_blank"><img src="imgs/310wide/Japaness.png"/ ></a>
             <span class="tile-label tileLabelFixed_L">Japaness Moive</span>
         </div>
 
@@ -111,7 +147,7 @@
 
         <!--TICKETS><!-->
         <div id="ticketsNow"  class="tile tile-large-x">
-             <a href='movieList.html' target="_blank"><img src="imgs/310wide/sell-tickets.jpg"/ ></a>
+             <a href='movieList.php' target="_blank"><img src="imgs/310wide/sell-tickets.jpg"/ ></a>
             <span class="tile-label tileLabelFixed_L">Booking Now</span>
         </div>
 </div>
@@ -123,14 +159,7 @@
 </br>
 
         <!--footer -->
-<nav class="nav nav-pills navbar-fixed-bottom tileLabelFixed_L fixBottom">
-   	<div class="footer">
-		<div class="container">
-			<div class="footer-left">
-				<p>Copyright © 2015.Company Silverado All rights reserved. Student ID&name: S3534987,Siyu Zang & S3468120,Lingyun Gao</p>
-			</div>
-	</div>
-</nav>
+<?php include_once"includes/footer.php";?>
     <!--Main container end  ↑ ↑><!-->
 
 

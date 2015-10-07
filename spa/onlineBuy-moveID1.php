@@ -1,19 +1,8 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <title>Welcome to Silverado</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/metro.min.css" rel="stylesheet">
-    <link href="css/metro-responsive.min.css" rel="stylesheet">
-    <link href="css/metro-icons.min.css" rel="stylesheet">
-    <link href="css/ul.css" rel="stylesheet">
-    <link href="css/buttons.css" rel="stylesheet">
-    <link href="css/_fix.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <?php include_once "includes/headA.php";?>
 </head>
 
 <body>
@@ -38,27 +27,7 @@
             </div>
         </div>
         <!--Navigation area><!-->
-        <nav class="nav nav-pills navbar-static-top fix_UpAndDownForZero">
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href= "index.html"><button class="button button-small button-plain button-border" >
-                            <b>Home</b>
-                        </button></a>
-                    </li>
-                    <li>
-                        <a href="movieList.html"><button class="button button-small button-plain button-border" >
-                            <b>Movie Information</b>
-                        </button></a>
-                    </li>
-                    <li>
-                        <a href="newsList.html"><button class="button button-small button-plain button-border" href="News.html">
-                            <b>News</b>
-                        </button></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <?php include_once "includes/nav.php";?>
         <!-- ~~~~Navigation area><!-->
 
 
@@ -123,19 +92,26 @@
 
 
 
+<script>
+$(document).ready(function(){
+if (movies.thebournelegacy.Name != "undefined"){
+	$("#heading").html(""+movie.thebournelegacy.Heading+"");
+	$("#img").attr("src"+movie.thebournelegacy.Image+"");
+	$("#description").html(""+movie.thebournelegacy.Description+"");
+	$("rating").html(
+
+
+
+
+
+}
+
+
+</script>
 
 
         <!--footer -->
-        <nav class="nav nav-pills navbar-fixed-bottom tileLabelFixed_L fixBottom">
-   	<div class="footer">
-		<div class="container">
-			<div class="footer-left">
-				<p>Copyright &copy; 2015.Company Silverado All rights reserved.<a target="_blank" href="#"></a></p>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-	</div>
-		</nav>
+       <?php include_once "includes/footer.php";?>
 <!--Main container end  ↑ ↑><!-->        
 </body>
 

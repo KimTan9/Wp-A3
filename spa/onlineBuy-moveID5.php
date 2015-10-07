@@ -1,19 +1,8 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <title>Welcome to Silverado</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/metro.min.css" rel="stylesheet">
-    <link href="css/metro-responsive.min.css" rel="stylesheet">
-    <link href="css/metro-icons.min.css" rel="stylesheet">
-    <link href="css/ul.css" rel="stylesheet">
-    <link href="css/buttons.css" rel="stylesheet">
-    <link href="css/_fix.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+   <?php include_once "includes/headA.php";?>
 </head>
 
 <body>
@@ -38,28 +27,9 @@
             </div>
         </div>
         <!--Navigation area><!-->
-        <nav class="nav nav-pills navbar-static-top fix_UpAndDownForZero">
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href= "index.html"><button class="button button-small button-plain button-border" >
-                            <b>Home</b>
-                        </button></a>
-                    </li>
-                    <li>
-                        <a href="movieList.html"><button class="button button-small button-plain button-border" >
-                            <b>Movie Information</b>
-                        </button></a>
-                    </li>
-                    <li>
-                        <a href="newsList.html"><button class="button button-small button-plain button-border" href="News.html">
-                            <b>News</b>
-                        </button></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <?php include_once "includes/nav.php";?>
         <!-- ~~~~Navigation area><!-->
+
 
 
         <!--big_1><!-->
@@ -67,10 +37,10 @@
             <div class="tile-content">
                 <div class="carousel" data-role="carousel">
                     <div class="slide">
-                        <a href='movieList.html#Case Closed: Sunflowers of Inferno' target="_blank"><img src="imgs/bigRectRollingImgs/BRRI_6.png"/ ></a>
+                        <a href='movieList.html#Pirates of the Caribbean: On Stranger Tides' target="_blank"><img src="imgs/bigRectRollingImgs/BRRI_5.png"></a>
                     </div>
                 </div>
-                <span class="tile-label tileLabelFixed_L">Case Closed: Sunflowers of Inferno</span>
+                <span class="tile-label tileLabelFixed_L">Titanic</span>
             </div>
         </div>
 
@@ -83,59 +53,51 @@
 									 <b><h1>movie details</h1></b><br>
                                                                          	<div class="each-row">
                                         	<div class="col-1">Director:</div>
-                                            <div class="col-2">Kobun Shizuno</div>
+                                            <div class="col-2"> James Cameron</div>
                                         </div>
                                                                                                                   <div class="each-row">
                                         	<div class="col-1">Cast:</div>
-                                            <div class="col-2"><p><span>Minami Takayama</span>,&nbsp;<span>Kappei Yamaguchi</span>,&nbsp;<span>Wakana Yamazaki</span>,&nbsp;<span>Rikiya Koyama</span></p></div>
+                                            <div class="col-2"><p><span>Leonardo DiCaprio</span>,&nbsp;<span>Kate Winslet</span>,&nbsp;<span>Billy Zane</p></div>
                                         </div>
                                                                                                                   
                                     </div>
                                     <div class="each-col f-left">
                                                                          	<div class="each-row">
                                         	<div class="col-1">Release:</div>
-                                            <div class="col-2">03/09/2015</div>
+                                            <div class="col-2">05/09/2015</div>
                                         </div>
                                                                                                                   <div class="each-row">
                                         	<div class="col-1">Length:</div>
-                                            <div class="col-2">112 Mins</div>
+                                            <div class="col-2">195 Mins</div>
                                         </div>
                                                                              
                                         <div class="each-row">
                                         	<div class="col-1">Genre:</div>
-                                            <div class="col-2">Anima</div>
+                                            <div class="col-2">Drama, Romance</div>
                                         </div>
                                                                                                                   <div class="each-row">
                                         	<div class="col-1">Distributor:</div>
-                                            <div class="col-2">Toho</div>
+                                            <div class="col-2">20th Century Fox</div>
                                         </div>
                                                                                                                   <div class="each-row">
                                         	<div class="col-1">Rating:</div>
                                             <div class="col-2 movie_rating">
-                                                                                            <img src="imgs/rate/G.png" alt="" width="20" align="absmiddle" title="" class="tooltip-sw"/>
-                                            											<div> (G – Suitable for viewing by all ages.)</div>
+                                                                                            <img src="imgs/rate/M.png" alt="" width="20" align="absmiddle" title="" class="tooltip-sw"/>
+                                            											<div> (M – Recommended for mature audiences.)</div>
 																				</div>
 																			</div>
                                                                                                                   <div class="each-row">
-											<a href='movieList.html#Case Closed: Sunflowers of Inferno'><button type="button" class="btn btn-primary">Back to Select Movie</button></a>																			
+											<a href='movieList.html#Titanic'><button type="button" class="btn btn-primary">Back to Select Movie</button></a>																			
 																		</div>
 																		</div>
 																	</div>
 
 
 
+
         <!--footer -->
-        <nav class="nav nav-pills navbar-fixed-bottom tileLabelFixed_L fixBottom">
-   	<div class="footer">
-		<div class="container">
-			<div class="footer-left">
-				<p>Copyright &copy; 2015.Company Silverado All rights reserved.<a target="_blank" href="#"></a></p>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-	</div>
-		</nav>
-    <!--Main container end  ↑ ↑><!-->        
+        <?php include_once "includes/footer.php";?>
+            <!--Main container end  ↑ ↑><!--> 
 </body>
 
 

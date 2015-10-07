@@ -1,19 +1,8 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <title>Welcome to Silverado</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/metro.min.css" rel="stylesheet">
-    <link href="css/metro-responsive.min.css" rel="stylesheet">
-    <link href="css/metro-icons.min.css" rel="stylesheet">
-    <link href="css/ul.css" rel="stylesheet">
-    <link href="css/buttons.css" rel="stylesheet">
-    <link href="css/_fix.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <?php include_once "includes/headA.php";?>
 </head>
 
 <body>
@@ -30,7 +19,7 @@
         <div id="big_Head" class="page-header fix_cloudsColor">
             <div class="container">
 				<div class="left">
-<a href= "index.html"><h1><img src="imgs/logo.png" width="150" height="150"></a>
+<a href= "index.php"><h1><img src="imgs/logo.png" width="150" height="150"></a>
                     Silverado&nbsp;&nbsp;&nbsp;
                     <small>The best experience for film</small>
                 </h1>
@@ -38,27 +27,7 @@
             </div>
         </div>
         <!--Navigation area><!-->
-        <nav class="nav nav-pills navbar-static-top fix_UpAndDownForZero">
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href= "index.html"><button class="button button-small button-plain button-border" >
-                            <b>Home</b>
-                        </button></a>
-                    </li>
-                    <li>
-                        <a href="movieList.html"><button class="button button-small button-plain button-border" >
-                            <b>Movie Information</b>
-                        </button></a>
-                    </li>
-                    <li>
-                        <a href="newsList.html"><button class="button button-small button-plain button-border" href="News.html">
-                            <b>News</b>
-                        </button></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+      <?php  include_once "includes/nav.php"; ?>
         <!-- ~~~~Navigation area><!-->
 
 
@@ -118,14 +87,7 @@ th, td {
 
 
         <!--footer -->
-<nav class="nav nav-pills navbar-fixed-bottom tileLabelFixed_L fixBottom">
-   	<div class="footer">
-		<div class="container">
-			<div class="footer-left">
-				<p>Copyright © 2015.Company Silverado All rights reserved. Student ID&name: S3534987,Siyu Zang & S3468120,Lingyun Gao</p>
-			</div>
-	</div>
-</nav>
+<?php include_once"includes/footer";?>
     <!--Main container end  ↑ ↑><!-->        
 
 	

@@ -1,20 +1,8 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <title>Welcome to Silverado</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/metro.min.css" rel="stylesheet">
-    <link href="css/metro-responsive.min.css" rel="stylesheet">
-    <link href="css/metro-icons.min.css" rel="stylesheet">
-    <link href="css/ul.css" rel="stylesheet">
-    <link href="css/buttons.css" rel="stylesheet">
-    <link href="css/_fix.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<script src="js/myjs.js"></script>
+   <?php include_once"includes/headA.php";?>
 </head>
 
 <body>
@@ -33,7 +21,7 @@
         <div id="big_Head" class="page-header fix_cloudsColor">
             <div class="container">
 				<div class="left">
-<a href= "index.html"><h1><img src="imgs/logo.png" width="150" height="150"></a>
+<a href= 'index.php'><h1><img src="imgs/logo.png" width="150" height="150"></a>
 					Silverado&nbsp;&nbsp;&nbsp;
                     <small>The best experience for film</small>
                 </h1>
@@ -41,27 +29,8 @@
             </div>
         </div>
         <!--Navigation area><!-->
-        <nav class="nav nav-pills navbar-static-top fix_UpAndDownForZero">
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href= "index.html"><button class="button button-small button-plain button-border" >
-                            <b>Home</b>
-                        </button></a>
-                    </li>
-                    <li>
-                        <a href="movieList.html"><button class="button button-small button-plain button-border" >
-                            <b>Movie Information</b>
-                        </button></a>
-                    </li>
-                    <li>
-                        <a href="newsList.html"><button class="button button-small button-plain button-border" href="News.html">
-                            <b>News</b>
-                        </button></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <?php include_once "includes/nav.php";?>
+        
         <!-- ~~~~Navigation area><!-->
 
         <!--big_1><!-->
@@ -69,7 +38,7 @@
             <div id="The Bourne Legacy" class="tile-content">
                 <div class="carousel" data-role="carousel">
                     <div class="slide">
-                        <a href="onlineBuy-moveID1.html"><img src="imgs/bigRectRollingImgs/BRRI_1.png"></a>
+                        <a href="onlineBuy-moveID1.php"><img src="imgs/bigRectRollingImgs/BRRI_1.png"></a>
                     </div>
                 </div>
                 <span class="tile-label tileLabelFixed_L">The Bourne Legacy</span>
@@ -87,9 +56,10 @@
                                         	<div class="col-3">An expansion of the universe from Robert Ludlum's novels, centered on a new hero whose stakes have been triggered by the events of the previous three films.</div>
 																				</div>
 		<button type="button" class="btn btn-success" data-toggle="modal" data-target="#Onlinebuy">Book Your Tickets</button>
-		<a href="onlineBuy-moveID1.html"><button type="button" class="btn btn-primary">Detail</button></a>
+		<a href="onlineBuy-moveID1.php">
+		<button type="button" class="btn btn-primary">Detail</button></a>
 																			</div>
-																		</div>
+	</div>
 																
 
 		<div id="big_Head" class="page-header fix_cloudsColor">
@@ -101,7 +71,7 @@
             <div class="tile-content">
                 <div class="carousel" data-role="carousel">
                     <div class="slide">
-                        <a href="onlineBuy-moveID2.html"><img src="imgs/bigRectRollingImgs/BRRI_2.png"></a>
+                        <a href="onlineBuy-moveID2.php"><img src="imgs/bigRectRollingImgs/BRRI_2.png"></a>
                     </div>
                 </div>
                 <span class="tile-label tileLabelFixed_L">The Godfather</span>
@@ -118,7 +88,7 @@
                                         	<div class="col-3">The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.</div>
 																			</div>
 		<button type="button" class="btn btn-success" data-toggle="modal" data-target="#Onlinebuy">Book Your Tickets</button>
-		<a href="onlineBuy-moveID2.html"><button type="button" class="btn btn-primary">Detail</button></a>
+		<a href="onlineBuy-moveID2.php"><button type="button" class="btn btn-primary">Detail</button></a>
 																		</div>
 																	</div>
 
@@ -132,7 +102,7 @@
             <div class="tile-content">
                 <div class="carousel" data-role="carousel">
                     <div class="slide">
-                        <a href="onlineBuy-moveID3.html"><img src="imgs/bigRectRollingImgs/BRRI_3.png"></a>
+                        <a href="onlineBuy-moveID3.php"><img src="imgs/bigRectRollingImgs/BRRI_3.png"></a>
                     </div>
                 </div>
                 <span class="tile-label tileLabelFixed_L">Despicable Me 2</span>
@@ -146,7 +116,7 @@
                                                                          	<div class="each-row">
                                         	<div class="col-3">When Gru, the world's most super-bad turned super-dad has been recruited by a team of officials to stop lethal muscle and a host of Gru's own, He has to fight back with new gadgetry, cars, and more minion madness.</div>
 																			</div>
-		<a href="onlineBuy-moveID3.html"><button type="button" class="btn btn-primary">Detail</button></a>
+		<a href="onlineBuy-moveID3.php"><button type="button" class="btn btn-primary">Detail</button></a>
 																		</div>
 																	</div>
 
@@ -159,7 +129,7 @@
             <div class="tile-content">
                 <div class="carousel" data-role="carousel">
                     <div class="slide">
-                        <a href="onlineBuy-moveID4.html"><img src="imgs/bigRectRollingImgs/BRRI_4.png"></a>
+                        <a href="onlineBuy-moveID4.php"><img src="imgs/bigRectRollingImgs/BRRI_4.png"></a>
                     </div>
                 </div>
                 <span class="tile-label tileLabelFixed_L">Blood Diamond</span>
@@ -173,7 +143,8 @@
                                                                          	<div class="each-row">
                                         	<div class="col-3">A fisherman, a smuggler, and a syndicate of businessmen match wits over the possession of a priceless diamond.</div>
 																			</div>
-		<a href="onlineBuy-moveID4.html"><button type="button" class="btn btn-primary">Detail</button></a>
+		
+		<a href="onlineBuy-moveID4.php"><button type="button" class="btn btn-primary">Detail</button></a>
 																		</div>
 																	</div>
 
@@ -187,7 +158,7 @@
             <div class="tile-content">
                 <div class="carousel" data-role="carousel">
                     <div class="slide">
-                        <a href="onlineBuy-moveID5.html"><img src="imgs/bigRectRollingImgs/BRRI_5.png"></a>
+                        <a href="onlineBuy-moveID5.php"><img src="imgs/bigRectRollingImgs/BRRI_5.png"></a>
                     </div>
                 </div>
                 <span class="tile-label tileLabelFixed_L">Titanic</span>
@@ -202,7 +173,7 @@
                                         	<div class="col-3">A seventeen-year-old aristocrat falls in love with a kind, but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.</div>
 																			</div>
 		<button type="button" class="btn btn-success" data-toggle="modal" data-target="#Onlinebuy">Book Your Tickets</button>
-		<a href="onlineBuy-moveID5.html"><button type="button" class="btn btn-primary">Detail</button></a>
+		<a href="onlineBuy-moveID5.php"><button type="button" class="btn btn-primary">Detail</button></a>
 																		</div>
 																	</div>
 
@@ -216,7 +187,7 @@
             <div class="tile-content">
                 <div class="carousel" data-role="carousel">
                     <div class="slide">
-                        <a href="onlineBuy-moveID6.html"><img src="imgs/bigRectRollingImgs/BRRI_6.png"></a>
+                        <a href="onlineBuy-moveID6.php"><img src="imgs/bigRectRollingImgs/BRRI_6.png"></a>
                     </div>
                 </div>
                 <span class="tile-label tileLabelFixed_L">Case Closed: Sunflowers of Inferno</span>
@@ -231,7 +202,7 @@
                                         	<div class="col-3">At an exclusive auction house in New York, a painting recently found in Arles was up for bids. It had been examined by various experts and declared to be one of Van Gogh's 'Sunflowers', similar to a masterpiece thought to be destroyed during a U.S. air raid in Japan during World War II.</div>
 																			</div>
 		<button type="button" class="btn btn-success" data-toggle="modal" data-target="#Onlinebuy">Book Your Tickets</button>
-		<a href="onlineBuy-moveID6.html"><button type="button" class="btn btn-primary">Detail</button></a>
+		<a href="onlineBuy-moveID6.php"><button type="button" class="btn btn-primary">Detail</button></a>
 																		</div>
 																	</div>
 
@@ -247,14 +218,7 @@
 
 
         <!--footer -->
-<nav class="nav nav-pills navbar-fixed-bottom tileLabelFixed_L fixBottom">
-   	<div class="footer">
-		<div class="container">
-			<div class="footer-left">
-				<p>Copyright © 2015.Company Silverado All rights reserved. Student ID&name: S3534987,Siyu Zang & S3468120,Lingyun Gao</p>
-			</div>
-	</div>
-</nav>
+<?php include_once"includes/footer.php";?>
     <!--Main container end  ↑ ↑><!-->        
 
 <!-- ModalOnlinebuy -->
